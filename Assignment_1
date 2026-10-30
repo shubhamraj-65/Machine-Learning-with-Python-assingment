@@ -87,6 +87,23 @@ else:
     print("Low Pass")
 
 
+# 6.⁠ ⁠Electricity Bill Calculator
+# Scenario: An electricity company charges its customers as follows:
+# First 100 units: $0.5 per unit
+# Next 100 units (101-200): $0.75 per unit
+# Above 200 units: $1 per unit
+# Task: Write a program that accepts the number of units consumed and calculates the total bill.
+
+units = int(input("Enter the units consumed: "))
+if units <= 100:
+    bill = units * 0.5
+elif units <= 200:
+    bill = (100 * 0.5) + ((units - 100) * 0.75)
+else:
+    bill = (100 * 0.5) + (100 * 0.75) + ((units - 200) * 1)
+print("Total electricity bill: $", bill)
+
+
 # 7.⁠ ⁠Eligibility for Loan Approval
 # Scenario: A bank approves loans based on these conditions:
 # Age should be between 21 and 60
