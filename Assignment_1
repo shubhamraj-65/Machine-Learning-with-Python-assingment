@@ -20,3 +20,20 @@ final_amount = purchases_amount - discount
 print("Purchase Amount: $", purchases_amount)
 print("Discount: $", discount)
 print("Final Amount to Pay: $", final_amount)
+
+
+# 2.⁠ ⁠Traffic Light Simulation
+# Scenario: Create a program that simulates a traffic light. The user inputs one of the colors: Red, Yellow, or Green. Based on the input:
+# If the input is Red, display "Stop."
+# If the input is Yellow, display "Ready to move."
+# If the input is Green, display "Go."
+# For invalid input, display "Invalid color."
+Traffic_Light=input("enter light:")
+if Traffic_Light=="Red":
+    print("Stop.")
+elif Traffic_Light=="Yellow":
+    print("Ready to move.")
+elif Traffic_Light=="Green":
+    print("Go.")
+else:
+    print("Invalid color.")
