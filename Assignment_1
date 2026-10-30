@@ -37,3 +37,38 @@ elif Traffic_Light=="Green":
     print("Go.")
 else:
     print("Invalid color.")
+
+
+# 3.⁠ ⁠Grade Evaluation System
+# Scenario: A school uses the following grading system:
+# Marks >= 90: Grade A
+# Marks >= 75 and < 90: Grade B
+# Marks >= 50 and < 75: Grade C
+# Marks < 50: Fail
+# Task: Write a program that accepts the student's marks and displays their grade.
+marks =float(input("enetr marks:"))
+if marks >=90:
+    print("Grade A")
+elif marks >=75:
+    print("Grade B")
+elif marks >=50:
+    print("Grade C")
+else:
+    print("Fail")
+    
+# 4.⁠ ⁠Odd or Even and Divisibility Check
+# Scenario: Write a program that takes an integer as input and checks:
+# Whether the number is odd or even
+# Whether the number is divisible by 5
+# Display appropriate messages for both conditions.
+
+num=int(input("enter any number:"))
+if num %2==0 and num %5==0:
+    print(num,"is even and divisible by 5")
+elif num %2==0 and num %5!=0:
+    print(num,"is even but not divisible by 5")
+elif num %2!=0 and num %5==0:
+    print(num,"is odd and divisible by 5")
+else:
+    print(num,"is odd but not divisible by 5")
+          
