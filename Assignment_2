@@ -1,1 +1,118 @@
+Assignment_2
+
+# 11.⁠ ⁠Leap Year Checker
+# Accept a year. First check whether it is divisible by 4. If yes, check whether it is divisible by 100. If it is, 
+# check whether it is divisible by 400. Display whether the year is a leap year.
+
+year =int(input("enter year :"))
+if year % 4==0:
+    if year %100==0:
+        if year %400==0:
+            print("Leap Year")
+        else:
+            print("Not Leap Year")
+    else:
+        print("Leap Year")
+else:
+    print("Not Leap Year")
+
+
+# 12.⁠ ⁠Triangle Classification
+# Accept three side lengths. First check whether they can form a valid triangle.
+# If valid, check whether all three sides are equal, exactly two sides are equal, or all sides are different.
+
+a = int(input("Enter first side: "))
+b = int(input("Enter second side: "))
+c = int(input("Enter third side: "))
+
+if a + b > c and a + c > b and b + c > a:
+    if a==b and b==c:
+        print("Equilateral Triangle")
+    else:
+        if a == b or b == c or a == c:
+            print("Isosceles Triangle")
+        else:
+            print("Scalene Triangle")
+else:
+    print("Invalid Triangle")
+
+
+# 14.⁠ ⁠Password Strength Checker
+# Accept a password. If its length is at least 8 characters, check whether it contains a digit. 
+# If it does, check whether it contains an uppercase letter. 
+# Classify it as strong or moderate based on these conditions. Otherwise, classify it as weak.
+
+password=input("enter your pass:")
+if len(password)>=8:
+    if password.isalnum():
+        if password.isdigit():
+            print("Weak Password")
+        else:
+            print("Strong Password")
+    else:
+        print("Strong Password")
+else:
+    print("Weak Password")
+
+
+# 13.⁠ ⁠Employee Bonus Calculator
+# Accept years of experience and performance rating. If experience is at least 5 years, check the rating.
+# Give a 20% bonus for an excellent rating and 10% for a good rating. If experience is below 5 years,
+# give a 5% bonus only for an excellent rating.
+experience=float(input("enter experience of years:"))
+rating = input("Enter performance rating (excellent/good): ").lower()
+if experience >=5:
+    if rating == "excellent":
+        print("Bonus: 20%")
+    else:
+        if rating=="good":
+             print("Bonus: 10%")
+        else:
+            print("Invalid rating")
+else:
+    if rating == "excellent":
+        print("Bonus: 5%")
+    else:
+        print("No bonus")
+
+
+# 15.⁠ ⁠Hospital Consultation Priority
+# Accept a patient's temperature and oxygen saturation.
+# If oxygen saturation is below 90%, classify as high priority. Otherwise,
+# check whether the temperature is at least 39°C. If so, classify as urgent; otherwise, classify as normal priority.
+# (Simplified programming exercise, not a medical triage tool.)
+
+temperature = float(input("Enter temperature: "))
+oxygen = float(input("Enter oxygen saturation: "))
+
+if oxygen < 90:
+    if temperature >= 39:
+        print("High Priority")
+    else:
+        print("High Priority")
+else:
+    if temperature >= 39:
+        print("Urgent")
+    else:
+        print("Normal Priority")
+
+
+
+# 16.⁠ ⁠Income Tax Slab Calculator
+# Accept annual taxable income. If income is up to ₹3 lakh, tax is 0%. Otherwise, 
+# check whether it is up to ₹7 lakh and apply a 5% rate to income above ₹3 lakh. 
+# For income above ₹7 lakh, apply progressive slabs of 0%, 5%, and 10% to the respective portions. Calculate the total tax.
+
+
+income = float(input("Enter annual taxable income: "))
+
+if income <= 300000:
+    tax = 0
+else:
+    if income <= 700000:
+        tax = (income - 300000) * 0.05
+    else:
+        tax = (400000 * 0.05) + ((income - 700000) * 0.10)
+
+print("Total Tax: ₹", tax)
 
