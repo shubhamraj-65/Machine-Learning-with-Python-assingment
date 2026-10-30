@@ -71,4 +71,30 @@ elif num %2!=0 and num %5==0:
     print(num,"is odd and divisible by 5")
 else:
     print(num,"is odd but not divisible by 5")
-          
+
+
+# 5.⁠ ⁠Password Strength Checker
+# Scenario: Write a program that checks the strength of a password based on these rules:# Length >= 8 characters: Strong
+# Length between 5 and 7 characters: Medium
+# Length < 5 characters: Weak
+
+passs =input("enter your pass:")
+if len(passs)>=8:
+    print("Strong Paa")
+elif len(passs) >5 <7:
+    print("Medium Pass")
+else:
+    print("Low Pass")
+
+
+# 7.⁠ ⁠Eligibility for Loan Approval
+# Scenario: A bank approves loans based on these conditions:
+# Age should be between 21 and 60
+# Monthly income should be greater than or equal to $5000
+# Task: Write a program to check whether a person is eligible for the loan based on their age and monthly income.
+age = int(input("enter your age:"))
+Monthly_income=int(input("enetr your Monthly income:"))
+if age >=21 and age <=60 and Monthly_income>=5000:
+    print("You are elible for loan")
+else:
+    print("not elible for loan")
